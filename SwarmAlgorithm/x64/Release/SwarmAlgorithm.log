@@ -1,0 +1,13 @@
+﻿  Reading Qt configuration (C:\Qt\5.14.1\msvc2017_64\\bin\qmake.exe)
+  uic SwarmAlgorithm.ui
+  rcc SwarmAlgorithm.qrc
+  moc SwarmAlgorithm.h
+   RCC: Warning: No resources in 'C:\Users\Tragen\source\repos\SwarmAlgorithm\SwarmAlgorithm\SwarmAlgorithm.qrc'.
+  main.cpp
+  Particle.cpp
+  Swarm.cpp
+  SwarmAlgorithm.cpp
+c:\users\tragen\source\repos\swarmalgorithm\swarmalgorithm\swarm.cpp(23): warning C4715: Swarm::functionValue: значение возвращается не при всех путях выполнения
+  qrc_SwarmAlgorithm.cpp
+  moc_SwarmAlgorithm.cpp
+  SwarmAlgorithm.vcxproj -> C:\Users\Tragen\source\repos\SwarmAlgorithm\x64\Release\SwarmAlgorithm.exe
