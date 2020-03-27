@@ -3,8 +3,8 @@
 AntColony::AntColony(int amountOfVertex, int amountOfAnts)
 {
 	isBestChanged = false;
-	amountOfVertex = amountOfVertex < MAX_VERTICES ? amountOfVertex : MAX_VERTICES; //std::min(amountOfVertex, MAX_VERTICES);
-	amountOfAnts = amountOfAnts < MAX_ANTS ? amountOfAnts : MAX_ANTS;
+	amountOfVertex =  std::min(amountOfVertex, MAX_VERTICES);
+	amountOfAnts = std::min(amountOfAnts, MAX_ANTS);
 
 	best = MAX_TOURS;
 	edges.resize(amountOfVertex);
@@ -90,16 +90,11 @@ int AntColony::SelectNextCity(int ant)
 	/* Выбрать следующий город */
 	from = ants[ant].getCurVertex();
 
-	std::cout << "SELECT NEXT CITY" << std::endl;
-
 	/* Расчет знаменателя */
 	std::vector<int> temp = ants[ant].getTabuList();
 	for (to = 0; to < vertices.size(); to++)
-	{
-		std::cout << "FROM: " + std::to_string(from) + " TO: " + std::to_string(to) << std::endl;
 		if (std::find(temp.begin(), temp.end(), to) == temp.end())
 			denom += GetAntProduct(from, to);
-	}
 
 	if (denom == 0.0)
 		throw ("DENOM MUST BE LARGER THAN 0.0");
